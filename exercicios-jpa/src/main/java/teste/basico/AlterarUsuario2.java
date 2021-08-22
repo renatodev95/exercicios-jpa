@@ -16,10 +16,9 @@ public class AlterarUsuario2 {
 		em.getTransaction().begin();
 		
 		Usuario usuario = em.find(Usuario.class, 7L); // classe Usuario, ID 7L tipo long
-		usuario.setNome("Leonardo Alterado");
-		usuario.setEmail("leonardo@lanche.com.br");
+		usuario.setNome("Leonardo Leitao");
 		
-		em.merge(usuario); // este corresponde ao UPDATE do registro
+		// em.merge(usuario);
 		
 		em.getTransaction().commit();
 		
