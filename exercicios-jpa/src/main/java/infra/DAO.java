@@ -31,12 +31,12 @@ public class DAO<E> {
 		em = emf.createEntityManager();
 	}
 	
-	public DAO<E> abrirTransacao() {
+	public DAO<E> abrirT() {
 		em.getTransaction().begin();
 		return this;
 	}
 	
-	public DAO<E> fecharTransacao() {
+	public DAO<E> fecharT() {
 		em.getTransaction().commit();
 		return this;
 	}
@@ -47,7 +47,7 @@ public class DAO<E> {
 	}
 	
 	public DAO<E> incluirAtomico(E entidade) {	
-		return this.abrirTransacao().incluir(entidade).fecharTransacao();
+		return this.abrirT().incluir(entidade).fecharT();
 	}
 	
 	public List<E> obterTodos() {
@@ -67,7 +67,7 @@ public class DAO<E> {
 		return query.getResultList();
 	}
 	
-	public void fechar() {
+	public void fecharC() {
 		em.close();
 	}
 }
