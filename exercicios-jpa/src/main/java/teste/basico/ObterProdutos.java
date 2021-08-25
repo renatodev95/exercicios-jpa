@@ -23,6 +23,6 @@ public class ObterProdutos {
 		
 		System.out.println("O valor total é R$" + String.format("%.2f", precoTotal).replace(".", ","));
 		
-		dao.fechar();
+		dao.fecharC();
 	}
 }
