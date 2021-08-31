@@ -2,7 +2,6 @@ package teste.consulta;
 
 import infra.DAO;
 import modelo.consulta.NotaFilme;
-import modelo.muitospramuitos.Filme;
 
 public class ObterMediaFilmes {
 
